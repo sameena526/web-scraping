@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import time
 import csv
 START_URL = "https://exoplanets.nasa.gov/exoplanet-catalog/"
-browser = webdriver.Chrome("/Users/apoorvelous/Downloads/chromedriver")
+browser = webdriver.Chrome(" ")
 browser.get(START_URL)
 time.sleep(10)
 def scrape():
@@ -23,7 +23,7 @@ def scrape():
                     except:
                         temp_list.append("")
             planet_data.append(temp_list)
-        browser.find_element_by_xpath('//*[@id="primary_column"]/footer/div/div/div/nav/span[2]/a').click()
+        browser.find_element_by_xpath(' ').click()
     with open("scrapper_2.csv", "w") as f:
         csvwriter = csv.writer(f)
         csvwriter.writerow(headers)
